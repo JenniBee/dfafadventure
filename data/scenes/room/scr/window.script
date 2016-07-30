@@ -1,0 +1,84 @@
+#include "scripts\base.inc"
+
+global WinMenu;
+
+#include "interface\verbbar\verbbar_functions.inc"
+
+var verb_default = "LookAt";
+
+////////////////////////////////////////////////////////////////////////////////
+on "LookAt"
+{
+  verb_setBar(Command.Verb + " "+self.Caption);
+  GoToObject();
+  Game.Interactive=false;
+
+  actor.Talk("I'd be outside if it weren't for this locked window.");
+
+  verb_cleanBar();
+  Game.Interactive=true;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+on "PickUp"
+{
+  verb_setBar(Command.Verb + " "+self.Caption);
+  GoToObject();
+  Game.Interactive=false;
+
+  actor.Talk("Sure, I'd pick that up.");
+  actor.Talk("But I don't have a chainsaw with me!");
+
+  verb_cleanBar();
+  Game.Interactive=true;
+}
+
+on "Use"
+{
+  verb_setBar(Command.Verb + " "+self.Caption);
+  GoToObject();
+  Game.Interactive=false;
+
+  actor.Talk("Yep.                ");
+  actor.Talk("It's locked.         ");
+
+  verb_cleanBar();
+  Game.Interactive=true;
+}
+
+on "TalkTo"
+{
+  verb_setBar(Command.Verb + " "+self.Caption);
+  GoToObject();
+  Game.Interactive=false;
+
+  actor.Talk("It's pointless. No one's outside.");
+
+  verb_cleanBar();
+  Game.Interactive=true;
+}
+
+on "book1"
+{
+  verb_setBar(Command.Verb + " "+self.Caption);
+  Game.Interactive=false;
+
+  actor.Talk("I'd love to throw this thing out the window");
+  actor.Talk("But, It's locked!");
+
+  verb_cleanBar();
+  Game.Interactive=true;
+}
+////////////////////////////////////////////////////////////////////////////////
+on "LeftClick"
+{
+  GoToObject();
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+function GoToObject()
+{
+  actor.GoTo(300, 120);
+  actor.TurnTo(DI_UPRIGHT);
+}

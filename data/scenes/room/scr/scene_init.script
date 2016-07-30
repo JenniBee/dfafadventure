@@ -1,0 +1,19 @@
+#include "scripts\base.inc"
+
+////////////////////////////////////////////////////////////////////////////////
+actor.SkipTo(139, 108);
+actor.Direction = DI_DOWNRIGHT;
+
+// point the "camera" at the actor
+Scene.SkipTo(actor);
+
+////////////////////////////////////////////////////////////////////////////////
+// scene state
+global StateRoom;
+
+// default values
+if(StateRoom==null)
+{
+  StateRoom.Visited = false;
+}
+

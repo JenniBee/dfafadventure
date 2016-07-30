@@ -1,0 +1,11 @@
+ITEM
+{
+   CURSOR_COMBINED = TRUE
+   CAPTION = "Letter"
+   NAME = "book1"
+   IMAGE = "items\book.bmp"
+   CURSOR = "items\book.bmp"
+   CURSOR_HOVER = "items\book.bmp"
+   SCRIPT = "items\book.script"
+}
+
