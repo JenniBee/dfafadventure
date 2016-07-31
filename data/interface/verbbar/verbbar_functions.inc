@@ -4,21 +4,21 @@ global Object1;
 
 global button_lookat;
 global button_talkto;
-global button_take;
+global button_pickup;
 global button_use;
 global button_give;
 global button_sniff;
 
 global lookat_over;
 global talkto_over;
-global take_over;
+global pickup_over;
 global use_over;
 global give_over;
 global sniff_over;
 
 global widget_button_lookat;
 global widget_button_talkto;
-global widget_button_take;
+global widget_button_pickup;
 global widget_button_use;
 global widget_button_give;
 global widget_button_sniff;
@@ -32,21 +32,21 @@ function verb_initBar()
 {
   lookat_over  = false;
   talkto_over  = false;
-  take_over    = false;
+  pickup_over  = false;
   use_over     = false;
   give_over    = false;
   sniff_over   = false;
 
   widget_button_lookat  = WinMenu.GetWidget("LookAtContainer");
   widget_button_talkto  = WinMenu.GetWidget("TalkToContainer");
-  widget_button_take    = WinMenu.GetWidget("TakeContainer");
+  widget_button_pickup  = WinMenu.GetWidget("PickUpContainer");
   widget_button_use     = WinMenu.GetWidget("UseContainer");
   widget_button_give    = WinMenu.GetWidget("GiveContainer");
   widget_button_sniff   = WinMenu.GetWidget("SniffContainer");
 
   button_lookat = widget_button_lookat.GetEntity();
   button_talkto = widget_button_talkto.GetEntity();
-  button_take   = widget_button_take.GetEntity();
+  button_pickup = widget_button_pickup.GetEntity();
   button_use    = widget_button_use.GetEntity();
   button_give   = widget_button_give.GetEntity();
   button_sniff  = widget_button_sniff.GetEntity();
@@ -67,14 +67,14 @@ function verb_cleanBar()
   
   lookat_over=false;
   talkto_over=false;
-  take_over=false;
+  pickup_over=false;
   use_over=false;
   give_over=false;
   sniff_over=false;
 
   button_lookat.SetSprite("interface\verbbar\lookat_off.bmp");
   button_talkto.SetSprite("interface\verbbar\talkto_off.bmp");
-  button_take.SetSprite("interface\verbbar\take_off.bmp");
+  button_pickup.SetSprite("interface\verbbar\pickup_off.bmp");
   button_use.SetSprite("interface\verbbar\use_off.bmp");
   button_give.SetSprite("interface\verbbar\give_off.bmp");
   button_sniff.SetSprite("interface\verbbar\sniff_off.bmp");
@@ -96,7 +96,7 @@ function verb_hover(hoverme)
         button_talkto.SetSprite("interface\verbbar\talkto_def.bmp");
         break;
       case "Pick up":
-        button_take.SetSprite("interface\verbbar\take_def.bmp");
+        button_pickup.SetSprite("interface\verbbar\pickup_def.bmp");
         break;
       case "Use":
         button_use.SetSprite("interface\verbbar\use_def.bmp");
@@ -121,7 +121,7 @@ function verb_unhover(unhoverme)
         button_lookat.SetSprite("interface\verbbar\lookat_off.bmp");
         break;
       case "Pick up":
-        button_take.SetSprite("interface\verbbar\take_off.bmp");
+        button_pickup.SetSprite("interface\verbbar\pickup_off.bmp");
         break;
       case "Talk to":
         button_talkto.SetSprite("interface\verbbar\talkto_off.bmp");
@@ -145,7 +145,7 @@ function verb_unhover(unhoverme)
         button_lookat.SetSprite("interface\verbbar\lookat_on.bmp");
         break;
       case "Pick up":
-        button_take.SetSprite("interface\verbbar\take_on.bmp");
+        button_pickup.SetSprite("interface\verbbar\pickup_on.bmp");
         break;
       case "Talk to":
         button_talkto.SetSprite("interface\verbbar\talkto_on.bmp");
@@ -174,8 +174,8 @@ function verb_apply(appverb)
       self.ApplyEvent("LookAt");
       break;
     case "Pick up":
-      button_take.SetSprite("interface\verbbar\take_on.bmp");
-      self.ApplyEvent("Take");
+      button_pickup.SetSprite("interface\verbbar\pickup_on.bmp");
+      self.ApplyEvent("PickUp");
       break;
     case "Talk to":
       button_talkto.SetSprite("interface\verbbar\talkto_on.bmp");
@@ -218,7 +218,7 @@ function verb_doesNotWork()
     case "Give":
       actor.Talk("I can't give this to that!");
       break;
-    case "Give":
+    case "Sniff":
       actor.Talk("I'm not smelling that!");
       break;
   }
@@ -231,19 +231,19 @@ function verb_switchButtons(mode)
     case 1:
       widget_button_lookat.Visible  = true;
       widget_button_talkto.Visible  = true;
-      widget_button_take.Visible    = true;
+      widget_button_pickup.Visible  = true;
       widget_button_use.Visible     = true;
       widget_button_give.Visible    = true;
-      widget_button_sniff.Visible    = true;
+      widget_button_sniff.Visible   = true;
       break;
     case 0:
     default:
       widget_button_lookat.Visible  = false;
       widget_button_talkto.Visible  = false;
-      widget_button_take.Visible    = false;
+      widget_button_pickup.Visible  = false;
       widget_button_use.Visible     = false;
       widget_button_give.Visible    = false;
-      widget_button_sniff.Visible    = false;
+      widget_button_sniff.Visible   = false;
       break;
   }
 }

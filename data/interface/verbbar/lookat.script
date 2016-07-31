@@ -30,7 +30,7 @@ on "LeftClick"
   Command.Verb = "Look at";
   button_lookat.SetSprite("interface\verbbar\lookat_on.bmp");
   button_talkto.SetSprite("interface\verbbar\talkto_off.bmp");
-  button_take.SetSprite("interface\verbbar\take_off.bmp");
+  button_pickup.SetSprite("interface\verbbar\pickup_off.bmp");
   button_use.SetSprite("interface\verbbar\use_off.bmp");
   button_give.SetSprite("interface\verbbar\give_off.bmp");
   button_sniff.SetSprite("interface\verbbar\sniff_off.bmp");

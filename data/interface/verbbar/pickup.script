@@ -6,20 +6,20 @@ global WinMenu;
 
 on "MouseEntry"
 {
-  if(take_over == false)
+  if(pickup_over == false)
   {
-    button_take.SetSprite("interface\verbbar\take_on.bmp");
-    take_over=true;
+    button_pickup.SetSprite("interface\verbbar\pickup_on.bmp");
+    pickup_over=true;
   }
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 on "MouseLeave"
 {
-  if(Command.Verb != "Pick Up")
+  if(Command.Verb != "Pick up")
   {
-    button_take.SetSprite("interface\verbbar\take_off.bmp");
-    take_over=false;
+    button_pickup.SetSprite("interface\verbbar\pickup_off.bmp");
+    pickup_over=false;
   }
 }
 
@@ -29,7 +29,7 @@ on "LeftClick"
   verb_cleanBar();
 
   Command.Verb = "Pick up";
-  button_take.SetSprite("interface\verbbar\take_on.bmp");
+  button_pickup.SetSprite("interface\verbbar\pickup_on.bmp");
   button_lookat.SetSprite("interface\verbbar\lookat_off.bmp");
   button_talkto.SetSprite("interface\verbbar\talkto_off.bmp");
   button_use.SetSprite("interface\verbbar\use_off.bmp");

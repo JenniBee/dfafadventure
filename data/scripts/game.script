@@ -43,7 +43,7 @@ on "LeftClick"
   if(ActObj!=null)
   {
     // clicking an inventory item
-    if((ActObj.Type=="item" || ActObj.Type=="entity") && ActObj.Name != "Take" && ActObj.Name != "Use" && ActObj.Name != "TalkTo" && ActObj.Name != "LookAt" && ActObj.Name != "Give" && ActObj.Name != "Sniff")
+    if((ActObj.Type=="item" || ActObj.Type=="entity") && ActObj.Name != "PickUp" && ActObj.Name != "Use" && ActObj.Name != "TalkTo" && ActObj.Name != "LookAt" && ActObj.Name != "Give" && ActObj.Name != "Sniff")
     {
       if (ActObj.Caption != null && ActObj.Caption != "" && (Command.Verb == "Use" || Command.Verb == "Give"))
       {
@@ -99,9 +99,9 @@ on "LeftClick"
       {
         ActObj.ApplyEvent("TalkTo");
       }
-      else if (Command.Verb=="Take" && ActObj.CanHandleEvent("Take")) 
+      else if (Command.Verb=="Pick up" && ActObj.CanHandleEvent("PickUp")) 
       {
-        ActObj.ApplyEvent("Take");
+        ActObj.ApplyEvent("PickUp");
       }
       else if(Command.Verb !="" && Command.Verb != "Give" && Command.Verb != "Use")
       {
@@ -123,7 +123,7 @@ on "LeftClick"
     }
   }
   // else propagate the LeftClick event to a scene
-  else if(ActObj.Name != "Take" && ActObj.Name != "Use" && ActObj.Name != "TalkTo" && ActObj.Name != "LookAt" && ActObj.Name != "Give" && ActObj.Name != "Sniff")
+  else if(ActObj.Name != "PickUp" && ActObj.Name != "Use" && ActObj.Name != "TalkTo" && ActObj.Name != "LookAt" && ActObj.Name != "Give" && ActObj.Name != "Sniff")
   {
     Command.Object1_caption = "";
     Command.Object1_name = "";
@@ -191,7 +191,7 @@ on "Keypress"
   if(Keyboard.Printable && (Keyboard.KeyCode==80 || Keyboard.KeyCode==112)) // 'p'
   {
     verb_cleanBar();
-    button_take.ApplyEvent("LeftClick");
+    button_pickup.ApplyEvent("LeftClick");
   }
 }
 

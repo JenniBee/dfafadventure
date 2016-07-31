@@ -119,9 +119,9 @@ SCENE {
       ALPHA_COLOR { 255,255,255 }
       ALPHA = 255
       EDITOR_SELECTED=TRUE
-      POINT {123,89}
-      POINT {306,91}
-      POINT {347,154}
+      POINT {126,92}
+      POINT {348,92}
+      POINT {390,151}
       POINT {75,153}
     }
 

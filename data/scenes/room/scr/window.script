@@ -26,8 +26,7 @@ on "PickUp"
   GoToObject();
   Game.Interactive=false;
 
-  actor.Talk("Sure, I'd pick that up.");
-  actor.Talk("But I don't have a chainsaw with me!");
+  actor.Talk("I can't rip it out of the wall!");
 
   verb_cleanBar();
   Game.Interactive=true;
@@ -39,8 +38,8 @@ on "Use"
   GoToObject();
   Game.Interactive=false;
 
-  actor.Talk("Yep.                ");
-  actor.Talk("It's locked.         ");
+  actor.Talk("Yep.");
+  actor.Talk("It's locked.");
 
   verb_cleanBar();
   Game.Interactive=true;
@@ -60,13 +59,35 @@ on "TalkTo"
 
 on "book1"
 {
-  verb_setBar(Command.Verb + " "+self.Caption);
-  Game.Interactive=false;
+  if(Command.Verb == "Give")
+	{
+	verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
 
-  actor.Talk("I'd love to throw this thing out the window");
-  actor.Talk("But, It's locked!");
+  	GoToObject();
 
-  verb_cleanBar();
+  	Game.Interactive=false;
+
+  	actor.TurnTo(DI_DOWN);
+  actor.Talk("This window deserves this letter.");
+  actor.Talk("Unfortunately, it's locked.");
+
+  	verb_cleanBar();
+	}
+  else
+	{
+	verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
+
+  	GoToObject();
+
+  	Game.Interactive=false;
+
+  	actor.TurnTo(DI_DOWN);
+  actor.Talk("I would throw this out the window.");
+  actor.Talk("However, the window is locked.");
+
+  	verb_cleanBar();
+	}
+
   Game.Interactive=true;
 }
 ////////////////////////////////////////////////////////////////////////////////

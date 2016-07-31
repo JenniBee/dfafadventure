@@ -32,7 +32,7 @@ on "TalkTo"
   Game.Interactive=false;
 
   actor.Talk("Hello! Is anyone out there?");
-  Sleep(1000);
+  Sleep(100);
   actor.Talk("Looks like I have to find a way out myself!");
 
   verb_cleanBar();
@@ -41,7 +41,7 @@ on "TalkTo"
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-on "Take"
+on "PickUp"
 {
   verb_setBar(Command.Verb + " "+self.Caption);
 
@@ -50,7 +50,8 @@ on "Take"
   Game.Interactive=false;
 
   actor.TurnTo(DI_DOWN);
-  actor.Talk("I can't just rip the door off its hinges!");
+  actor.Talk("Sure, I'd pick that up.");
+  actor.Talk("If only I had a chainsaw!");
 
   verb_cleanBar();
 
@@ -75,18 +76,51 @@ on "Use"
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-on "book1"
+on "Sniff"
 {
-  verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
+  verb_setBar(Command.Verb + " "+self.Caption);
 
   GoToObject();
 
   Game.Interactive=false;
 
   actor.TurnTo(DI_DOWN);
+  actor.Talk("It smells like cedar.");
+  
+  verb_cleanBar();
+
+  Game.Interactive=true;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+on "book1"
+{
+  if(Command.Verb == "Give")
+	{
+	verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
+
+  	GoToObject();
+
+  	Game.Interactive=false;
+
+  	actor.TurnTo(DI_DOWN);
+  actor.Talk("I'm not giving anything to that door.");
+
+  	verb_cleanBar();
+	}
+  else
+	{
+	verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
+
+  	GoToObject();
+
+  	Game.Interactive=false;
+
+  	actor.TurnTo(DI_DOWN);
   actor.Talk("It won't open, but throwing the letter at it won't help.");
 
-  verb_cleanBar();
+  	verb_cleanBar();
+	}
 
   Game.Interactive=true;
 }
@@ -120,7 +154,7 @@ on "MouseLeave"
 
 function GoToObject()
 {
-  actor.GoTo(120, 120);
-  actor.TurnTo(DI_LEFT);
+  actor.GoTo(80, 120);
+  actor.TurnTo(DI_UPLEFT);
 }
 

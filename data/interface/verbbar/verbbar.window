@@ -26,10 +26,10 @@ WINDOW
 
   ENTITY_CONTAINER
   {
-    NAME = "TakeContainer"
+    NAME = "PickUpContainer"
     X = 2
     Y = 45
-    ENTITY = "interface\verbbar\take.entity"
+    ENTITY = "interface\verbbar\pickup.entity"
   }
 
   ENTITY_CONTAINER

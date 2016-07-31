@@ -21,8 +21,8 @@ INVENTORY_BOX
     BUTTON
     {
       NAME = "prev"
-      X = 2
-      Y = 0
+      X = 0
+      Y = 2
       WIDTH = 20
       HEIGHT = 20
 
@@ -36,8 +36,8 @@ INVENTORY_BOX
     BUTTON
     {
       NAME = "next"
-      X = 2
-      Y = 20
+      X = 0
+      Y = 24
       WIDTH = 20
       HEIGHT = 20
 
