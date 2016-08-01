@@ -1,0 +1,11 @@
+#include "scripts\base.inc"
+
+////////////////////////////////////////////////////////////////////////////////
+actor.SkipTo(159, 300);
+actor.Direction = DI_DOWNRIGHT;
+
+// point the "camera" at the actor
+Scene.SkipTo(400,400);
+
+Sleep(8000);
+Game.QuitGame();

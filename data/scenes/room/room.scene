@@ -33,13 +33,65 @@ SCENE {
   
   ; ----- layers
   LAYER {
+    NAME="backlayer"
+    CAPTION=""
+    MAIN=FALSE
+    WIDTH=320
+    HEIGHT=170
+    ACTIVE=TRUE
+    EDITOR_SELECTED=FALSE
+    ENTITY {
+      NAME="background"
+      CAPTION=""
+      ACTIVE=TRUE
+      X=0
+      Y=0
+      SCALABLE=FALSE
+      INTERACTIVE=FALSE
+      COLORABLE=FALSE
+      EDITOR_SELECTED=FALSE
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SPRITE="scenes\room\background.bmp"
+    }
+
+  }
+
+  LAYER {
+    NAME="behind"
+    CAPTION=""
+    MAIN=FALSE
+    WIDTH=320
+    HEIGHT=170
+    ACTIVE=TRUE
+    EDITOR_SELECTED=TRUE
+    ENTITY {
+      NAME="noname"
+      CAPTION="Noname"
+      ACTIVE=TRUE
+      X=144
+      Y=49
+      SCALABLE=TRUE
+      INTERACTIVE=TRUE
+      COLORABLE=TRUE
+      EDITOR_SELECTED=TRUE
+      SPRITE="entities\noname\sprites\default.sprite"
+      TALK="entities\noname\sprites\talk.sprite"
+
+      SCRIPT="entities\noname\noname.script"
+      FONT = "fonts\outline_white.font"
+    }
+
+  }
+
+  LAYER {
     NAME="main"
     CAPTION=""
     MAIN=TRUE
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=TRUE
+    EDITOR_SELECTED=FALSE
     ENTITY {
       NAME="closet"
       CAPTION="door"
@@ -94,21 +146,6 @@ SCENE {
 
     }
 
-    ENTITY {
-      NAME="background"
-      CAPTION=""
-      ACTIVE=TRUE
-      X=-1
-      Y=-2
-      SCALABLE=FALSE
-      INTERACTIVE=FALSE
-      COLORABLE=FALSE
-      EDITOR_SELECTED=FALSE
-      WALK_TO_X=0
-      WALK_TO_Y=0
-      SPRITE="scenes\room\background.bmp"
-    }
-
     REGION {
       NAME="floor"
       CAPTION=""
@@ -118,11 +155,11 @@ SCENE {
       SCALE=0
       ALPHA_COLOR { 255,255,255 }
       ALPHA = 255
-      EDITOR_SELECTED=TRUE
-      POINT {126,92}
-      POINT {348,92}
-      POINT {390,151}
-      POINT {75,153}
+      EDITOR_SELECTED=FALSE
+      POINT {122,101}
+      POINT {344,101}
+      POINT {386,160}
+      POINT {71,162}
     }
 
   }

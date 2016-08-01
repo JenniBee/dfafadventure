@@ -22,9 +22,6 @@ verb_cleanBar();
 // load our main actor
 actor = Game.LoadActor("actors\molly\molly.actor");
 Game.MainObject = actor;
-actor.SubtitlesPosRelative = true; // we want absolute positioning
-actor.SubtitlesPosX = 0;
-actor.SubtitlesPosY = -20;
 
 // run the "daemon" script
 Game.AttachScript("scripts\game_daemon.script");
