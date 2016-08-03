@@ -64,7 +64,7 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=TRUE
+    EDITOR_SELECTED=FALSE
     ENTITY {
       NAME="noname"
       CAPTION="Noname"
@@ -74,12 +74,13 @@ SCENE {
       SCALABLE=TRUE
       INTERACTIVE=TRUE
       COLORABLE=TRUE
-      EDITOR_SELECTED=TRUE
-      SPRITE="entities\noname\sprites\default.sprite"
-      TALK="entities\noname\sprites\talk.sprite"
-
+      EDITOR_SELECTED=FALSE
+      WALK_TO_X=0
+      WALK_TO_Y=0
       SCRIPT="entities\noname\noname.script"
-      FONT = "fonts\outline_white.font"
+      SPRITE="entities\noname\sprites\default.sprite"
+      FONT="fonts\outline_white.font"
+        TALK="entities\noname\sprites\talk.sprite"
     }
 
   }
@@ -91,7 +92,7 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=FALSE
+    EDITOR_SELECTED=TRUE
     ENTITY {
       NAME="closet"
       CAPTION="door"
@@ -155,11 +156,36 @@ SCENE {
       SCALE=0
       ALPHA_COLOR { 255,255,255 }
       ALPHA = 255
+      EDITOR_SELECTED=TRUE
+      POINT {123,95}
+      POINT {345,95}
+      POINT {387,154}
+      POINT {72,156}
+    }
+
+  }
+
+  LAYER {
+    NAME="foreground"
+    CAPTION=""
+    MAIN=FALSE
+    WIDTH=320
+    HEIGHT=170
+    ACTIVE=TRUE
+    EDITOR_SELECTED=FALSE
+    ENTITY {
+      NAME="new entity"
+      CAPTION=""
+      ACTIVE=TRUE
+      X=22
+      Y=127
+      SCALABLE=FALSE
+      INTERACTIVE=FALSE
+      COLORABLE=FALSE
       EDITOR_SELECTED=FALSE
-      POINT {122,101}
-      POINT {344,101}
-      POINT {386,160}
-      POINT {71,162}
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SPRITE="scenes\room\foreground.bmp"
     }
 
   }
