@@ -13,7 +13,7 @@ on "LookAt"
   GoToObject();
   Game.Interactive=false;
 
-  actor.Talk("I'd be outside if it weren't for this locked window.");
+  actor.Talk("It looks really nice.");
 
   verb_cleanBar();
   Game.Interactive=true;
@@ -38,8 +38,7 @@ on "Use"
   GoToObject();
   Game.Interactive=false;
 
-  actor.Talk("Yep.");
-  actor.Talk("It's locked.");
+  actor.Talk("Hey! This is just a painting!");
 
   verb_cleanBar();
   Game.Interactive=true;
@@ -51,13 +50,13 @@ on "TalkTo"
   GoToObject();
   Game.Interactive=false;
 
-  actor.Talk("It's pointless. No one's outside.");
+  actor.Talk("It's pointless. No one can hear me.");
 
   verb_cleanBar();
   Game.Interactive=true;
 }
 
-on "book1"
+on "letter"
 {
   if(Command.Verb == "Give")
 	{
@@ -68,8 +67,8 @@ on "book1"
   	Game.Interactive=false;
 
   	actor.TurnTo(DI_DOWN);
-  actor.Talk("This window deserves this letter.");
-  actor.Talk("Unfortunately, it's locked.");
+  actor.Talk("I wish I could cram this letter in there.");
+  actor.Talk("But I can't.");
 
   	verb_cleanBar();
 	}
@@ -82,8 +81,8 @@ on "book1"
   	Game.Interactive=false;
 
   	actor.TurnTo(DI_DOWN);
-  actor.Talk("I would throw this out the window.");
-  actor.Talk("However, the window is locked.");
+  actor.Talk("I wish I could cram this letter in there.");
+  actor.Talk("But I can't.");
 
   	verb_cleanBar();
 	}

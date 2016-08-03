@@ -8,7 +8,7 @@ speaker.SubtitlesPosX = 0; //position of subtitles for your entity
 speaker.SubtitlesPosY = -20;
 
 ////////////////////////////////////////////////////////////////////////////////
-actor.SkipTo(142, 104);
+actor.SkipTo(188, 128);
 actor.Direction = DI_DOWNRIGHT;
 actor.SubtitlesPosX = 0; //position of subtitles for your actor
 actor.SubtitlesPosY = -20;

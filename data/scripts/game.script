@@ -26,8 +26,7 @@ Game.MainObject = actor;
 // run the "daemon" script
 Game.AttachScript("scripts\game_daemon.script");
 
-Game.TakeItem("book1");
-
+Game.TakeItem("letter");
 
 // which scene to load?
 Game.ChangeScene("scenes\room\room.scene");

@@ -252,6 +252,11 @@ function verb_changeMode(mode)
 {
   switch(mode)
   {
+    case 2:
+      WinMenu.SetImage("interface\verbbar\no_verbbar.bmp");
+      Game.InventoryVisible = false;
+      verb_switchButtons(0);
+      break;
     case 1:
       WinMenu.SetImage("interface\verbbar\verbbar_talk.bmp");
       Game.InventoryVisible = false;

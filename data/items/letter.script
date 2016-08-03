@@ -4,63 +4,57 @@ global WinMenu;
 
 #include "interface\verbbar\verbbar_functions.inc"
 
-var verb_default = "Talk to";
-
-var NoName;
-var Speaker;
-
-NoName = Scene.GetNode("noname");
-Speaker = Scene.GetNode("speaker");
+var verb_default = "Look at";
 
 ////////////////////////////////////////////////////////////////////////////////
 on "LookAt"
 {
-  verb_setBar(Command.Verb + " "+self.Caption);
-  GoToObject();
-  Game.Interactive=false;
+  verb_setBar(Command.Verb + " " + Command.Object1_caption);
+  Game.Interactive = false;
 
-  actor.Talk("It's a speaker. I wonder what it's for.");
-
+  actor.Talk("It's the letter that got me in this mess.");
+  actor.Talk("Stupid thing. This isn't fun at all!");
   verb_cleanBar();
-  Game.Interactive=true;
+  Game.Interactive = true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-on "TalkTo"
-{
-  verb_setBar(Command.Verb + " "+self.Caption);
-  GoToObject();
-  Game.Interactive=false;
 
-  actor.Talk("Hello?");
-  actor.Talk("There's no response.");
-  NoName.Talk("They don't respond until it's your turn.");
-
-  verb_cleanBar();
-  Game.Interactive=true;
-}
-
-////////////////////////////////////////////////////////////////////////////////
 on "letter"
 {
   verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
-  GoToObject();
-  Game.Interactive=false;
+  Game.Interactive = false;
 
-  actor.Talk("Hey! Whoever's in there! Want this letter?");
-  NoName.Talk("No one wants that letter.");
+  actor.Talk("I can't use the letter on itself!");
 
   verb_cleanBar();
-  Game.Interactive=true;
+  Game.Interactive = true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-on "LeftClick"
+
+on "PickUp"
 {
-  if(Command.Verb == "")
-  {
-    GoToObject();
-  }
+  verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
+  Game.Interactive = false;
+
+  actor.Talk("I already have it!");
+
+  verb_cleanBar();
+  Game.Interactive = true;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+
+on "TalkTo"
+{
+  verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
+  Game.Interactive = false;
+
+  actor.Talk("I haven't talked to letters in two months!");
+
+  verb_cleanBar();
+  Game.Interactive = true;
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -72,17 +66,11 @@ on "RightClick"
 ////////////////////////////////////////////////////////////////////////////////
 on "MouseEntry"
 {
-  verb_hover(verb_default);
+  verb_hover("Look at");
 }
 
 ////////////////////////////////////////////////////////////////////////////////
 on "MouseLeave"
 {
-  verb_unhover(verb_default);
-}
-
-function GoToObject()
-{
-  actor.GoTo(59, 50);
-  actor.TurnTo(DI_UPRIGHT);
+  verb_unhover("Look at");
 }

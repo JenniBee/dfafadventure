@@ -101,7 +101,7 @@ on "TalkTo"
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-on "book1"
+on "letter"
 {
   verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
   GoToObject();

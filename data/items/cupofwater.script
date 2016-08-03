@@ -12,8 +12,7 @@ on "LookAt"
   verb_setBar(Command.Verb + " " + Command.Object1_caption);
   Game.Interactive = false;
 
-  actor.Talk("It's the letter that got me in this mess.");
-  actor.Talk("Stupid thing. This isn't fun at all!");
+  actor.Talk("It's a paper cup full of water.");
   verb_cleanBar();
   Game.Interactive = true;
 }
@@ -25,7 +24,7 @@ on "book1"
   verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
   Game.Interactive = false;
 
-  actor.Talk("I can't use the letter on itself!");
+  actor.Talk("I can't use the cup on itself!");
 
   verb_cleanBar();
   Game.Interactive = true;
@@ -51,7 +50,7 @@ on "TalkTo"
   verb_setBar(Command.Verb + " " + Command.Object1_caption + " with " + Command.Object2_caption);
   Game.Interactive = false;
 
-  actor.Talk("I haven't talked to letters since I was 21.");
+  actor.Talk("Someone's watching. I'll talk to it later.");
 
   verb_cleanBar();
   Game.Interactive = true;

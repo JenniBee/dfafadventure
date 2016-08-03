@@ -55,6 +55,21 @@ SCENE {
       SPRITE="scenes\room\background.bmp"
     }
 
+    ENTITY {
+      NAME="couch"
+      CAPTION=""
+      ACTIVE=TRUE
+      X=184
+      Y=66
+      SCALABLE=FALSE
+      INTERACTIVE=FALSE
+      COLORABLE=FALSE
+      EDITOR_SELECTED=FALSE
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SPRITE="scenes\room\sprites\couch.bmp"
+    }
+
   }
 
   LAYER {
@@ -69,8 +84,8 @@ SCENE {
       NAME="noname"
       CAPTION="Noname"
       ACTIVE=TRUE
-      X=144
-      Y=49
+      X=216
+      Y=54
       SCALABLE=TRUE
       INTERACTIVE=TRUE
       COLORABLE=TRUE
@@ -83,6 +98,22 @@ SCENE {
         TALK="entities\noname\sprites\talk.sprite"
     }
 
+    ENTITY {
+      NAME="water"
+      CAPTION="Water Dispenser"
+      ACTIVE=TRUE
+      X=68
+      Y=59
+      SCALABLE=TRUE
+      INTERACTIVE=TRUE
+      COLORABLE=TRUE
+      EDITOR_SELECTED=FALSE
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SCRIPT="scenes\room\scr\water.script"
+      SPRITE="scenes\room\sprites\water.bmp"
+    }
+
   }
 
   LAYER {
@@ -93,37 +124,10 @@ SCENE {
     HEIGHT=170
     ACTIVE=TRUE
     EDITOR_SELECTED=TRUE
-    ENTITY {
-      NAME="closet"
-      CAPTION="door"
-      ACTIVE=TRUE
-      X=21
-      Y=148
-      SCALABLE=TRUE
-      INTERACTIVE=TRUE
-      COLORABLE=TRUE
-      EDITOR_SELECTED=FALSE
-      WALK_TO_X=0
-      WALK_TO_Y=0
-      SCRIPT="scenes\room\scr\closet.script"
-      REGION {
-        NAME="<unnamed>"
-        CAPTION=""
-        ACTIVE=TRUE
-        EDITOR_SELECTED_POINT=-1
-        POINT {2,55}
-        POINT {20,58}
-        POINT {35,63}
-        POINT {38,100}
-        POINT {40,123}
-        POINT {19,148}
-      }
-
-    }
 
     ENTITY {
       NAME="window"
-      CAPTION="window"
+      CAPTION="Window"
       ACTIVE=TRUE
       X=298
       Y=127
@@ -144,7 +148,63 @@ SCENE {
         POINT {301,127}
         POINT {287,112}
       }
+    }
 
+    ENTITY {
+      NAME="door"
+      CAPTION="Door"
+      ACTIVE=TRUE
+      X=298
+      Y=127
+      SCALABLE=TRUE
+      INTERACTIVE=TRUE
+      COLORABLE=TRUE
+      EDITOR_SELECTED=FALSE
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SCRIPT="scenes\room\scr\door.script"
+      REGION {
+        NAME="<unnamed>"
+        CAPTION=""
+        ACTIVE=TRUE
+        EDITOR_SELECTED_POINT=-1
+      POINT {5,55}
+      POINT {40,64}
+      POINT {45,124}
+      POINT {22,146}
+      }
+    }
+
+    REGION {
+      NAME="block_couch"
+      CAPTION=""
+      BLOCKED=TRUE
+      DECORATION=FALSE
+      ACTIVE=TRUE
+      SCALE=0
+      ALPHA_COLOR { 255,255,255 }
+      ALPHA = 255
+      EDITOR_SELECTED=FALSE
+      POINT {262,89}
+      POINT {350,92}
+      POINT {344,120}
+      POINT {279,117}
+    }
+
+    REGION {
+      NAME="block_water"
+      CAPTION=""
+      BLOCKED=TRUE
+      DECORATION=FALSE
+      ACTIVE=TRUE
+      SCALE=0
+      ALPHA_COLOR { 255,255,255 }
+      ALPHA = 255
+      EDITOR_SELECTED=FALSE
+      POINT {142,80}
+      POINT {194,79}
+      POINT {199,109}
+      POINT {142,108}
     }
 
     REGION {
@@ -156,7 +216,7 @@ SCENE {
       SCALE=0
       ALPHA_COLOR { 255,255,255 }
       ALPHA = 255
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       POINT {123,95}
       POINT {345,95}
       POINT {387,154}
@@ -174,11 +234,11 @@ SCENE {
     ACTIVE=TRUE
     EDITOR_SELECTED=FALSE
     ENTITY {
-      NAME="new entity"
+      NAME="foreground"
       CAPTION=""
       ACTIVE=TRUE
       X=22
-      Y=127
+      Y=129
       SCALABLE=FALSE
       INTERACTIVE=FALSE
       COLORABLE=FALSE
