@@ -47,7 +47,7 @@ on "TalkTo"
   while(!EndBranch) // loop until the player ends this dialogue
   {  
     Game.AddResponseOnce(0, "Are you Edgar Allen Poe?");
-    Game.AddResponseOnce(2, "How do I get out of here?");
+    Game.AddResponse(2, "How do I get out of here?");
     Game.AddResponse(3, "I'll leave you and your raven in peace.");
     
     var Res = Game.GetResponse(true); // automatically select last response
@@ -88,7 +88,7 @@ on "TalkTo"
         NoName.Talk("I'd ask you to tell me how it was.");
         NoName.Talk("However, no one ever comes back.");
         actor.Talk("Gulp.           ");
-        Game.ChangeScene("scenes\ending\ending.scene");
+        Game.ChangeScene("scenes\room2\room2.scene");
       case 3:
         EndBranch = true;  // response #3 exits the dialogue
         break;        

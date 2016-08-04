@@ -3,10 +3,10 @@
 ; $EDITOR_PROJECT_ROOT_DIR$ ..\..\..\
 
 SCENE {
-  NAME="room"
+  NAME="room2"
   CAPTION=""
   SCRIPT="scripts\scene.script"
-  SCRIPT="scenes\room\scr\scene_init.script"
+  SCRIPT="scenes\room2\scr\scene_init.script"
   
   ; ----- editor settings
   EDITOR_MARGIN_H=100
@@ -52,22 +52,55 @@ SCENE {
       EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
-      SPRITE="scenes\room\background.bmp"
+      SPRITE="scenes\room2\background.bmp"
     }
 
     ENTITY {
-      NAME="couch"
-      CAPTION=""
+      NAME="fhqwhgads"
+      CAPTION="Fhqwhgads"
       ACTIVE=TRUE
-      X=184
-      Y=66
+      X=185
+      Y=60
       SCALABLE=FALSE
       INTERACTIVE=FALSE
       COLORABLE=FALSE
       EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
-      SPRITE="scenes\room\sprites\couch.bmp"
+      SPRITE="entities\fhqwhgads\sprites\00.bmp"
+    }
+
+    ENTITY {
+      NAME="feddlefew"
+      CAPTION="Feddlefew"
+      ACTIVE=TRUE
+      X=125
+      Y=75
+      SCALABLE=FALSE
+      INTERACTIVE=FALSE
+      COLORABLE=FALSE
+      EDITOR_SELECTED=FALSE
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SPRITE="entities\feddlefew\sprites\00.bmp"
+    }
+
+    ENTITY {
+      NAME="jenni"
+      CAPTION="Jenni"
+      ACTIVE=TRUE
+      X=34
+      Y=68
+      SCALABLE=TRUE
+      INTERACTIVE=TRUE
+      COLORABLE=TRUE
+      EDITOR_SELECTED=FALSE
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SCRIPT="entities\jenni\jenni.script"
+      SPRITE="entities\jenni\sprites\default.sprite"
+      FONT="fonts\outline_white.font"
+        TALK="entities\jenni\sprites\talk.sprite"
     }
 
   }
@@ -80,40 +113,6 @@ SCENE {
     HEIGHT=170
     ACTIVE=TRUE
     EDITOR_SELECTED=FALSE
-    ENTITY {
-      NAME="noname"
-      CAPTION="Noname"
-      ACTIVE=TRUE
-      X=216
-      Y=54
-      SCALABLE=TRUE
-      INTERACTIVE=TRUE
-      COLORABLE=TRUE
-      EDITOR_SELECTED=FALSE
-      WALK_TO_X=0
-      WALK_TO_Y=0
-      SCRIPT="entities\noname\noname.script"
-      SPRITE="entities\noname\sprites\default.sprite"
-      FONT="fonts\outline_white.font"
-        TALK="entities\noname\sprites\talk.sprite"
-    }
-
-    ENTITY {
-      NAME="water"
-      CAPTION="Water Dispenser"
-      ACTIVE=TRUE
-      X=68
-      Y=59
-      SCALABLE=TRUE
-      INTERACTIVE=TRUE
-      COLORABLE=TRUE
-      EDITOR_SELECTED=FALSE
-      WALK_TO_X=0
-      WALK_TO_Y=0
-      SCRIPT="scenes\room\scr\water.script"
-      SPRITE="scenes\room\sprites\water.bmp"
-    }
-
   }
 
   LAYER {
@@ -124,17 +123,16 @@ SCENE {
     HEIGHT=170
     ACTIVE=TRUE
     EDITOR_SELECTED=TRUE
-
     ENTITY {
       NAME="door"
       CAPTION="Door"
       ACTIVE=TRUE
-      X=0
-      Y=54
+      X=25
+      Y=150
       SCALABLE=TRUE
       INTERACTIVE=TRUE
       COLORABLE=TRUE
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
       SCRIPT="scenes\room\scr\door.script"
@@ -155,12 +153,12 @@ SCENE {
       NAME="window"
       CAPTION="Window"
       ACTIVE=TRUE
-      X=0
-      Y=54
+      X=294
+      Y=150
       SCALABLE=TRUE
       INTERACTIVE=TRUE
       COLORABLE=TRUE
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
       SCRIPT="scenes\room\scr\window.script"
@@ -169,11 +167,12 @@ SCENE {
         CAPTION=""
         ACTIVE=TRUE
         EDITOR_SELECTED_POINT=-1
-        POINT {289,69}
-        POINT {309,65}
-        POINT {301,127}
-        POINT {287,112}
-      }    
+        POINT {283,64}
+        POINT {315,60}
+        POINT {298,150}
+        POINT {274,126}
+      }
+
     }
 
     REGION {
@@ -185,11 +184,11 @@ SCENE {
       SCALE=0
       ALPHA_COLOR { 255,255,255 }
       ALPHA = 255
-      EDITOR_SELECTED=FALSE
-      POINT {123,95}
+      EDITOR_SELECTED=TRUE
+      POINT {178,98}
       POINT {345,95}
       POINT {387,154}
-      POINT {72,156}
+      POINT {165,155}
     }
 
   }
