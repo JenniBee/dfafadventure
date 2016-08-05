@@ -122,7 +122,7 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=TRUE
+    EDITOR_SELECTED=FALSE
     ENTITY {
       NAME="door"
       CAPTION="Door"
@@ -151,7 +151,7 @@ SCENE {
 
     ENTITY {
       NAME="window"
-      CAPTION="Window"
+      CAPTION="Door"
       ACTIVE=TRUE
       X=294
       Y=150
@@ -184,11 +184,36 @@ SCENE {
       SCALE=0
       ALPHA_COLOR { 255,255,255 }
       ALPHA = 255
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       POINT {178,98}
       POINT {345,95}
       POINT {387,154}
       POINT {165,155}
+    }
+
+  }
+
+  LAYER {
+    NAME="foreground"
+    CAPTION=""
+    MAIN=FALSE
+    WIDTH=320
+    HEIGHT=170
+    ACTIVE=TRUE
+    EDITOR_SELECTED=TRUE
+    ENTITY {
+      NAME="new entity"
+      CAPTION=""
+      ACTIVE=TRUE
+      X=-1
+      Y=126
+      SCALABLE=FALSE
+      INTERACTIVE=FALSE
+      COLORABLE=FALSE
+      EDITOR_SELECTED=TRUE
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SPRITE="scenes\room2\foreground.bmp"
     }
 
   }

@@ -60,7 +60,7 @@ on "TalkTo"
         Game.AddResponseOnce(1, "Who is Doctor Anenome?");
         break;
       case 1:
-        Jenni.Talk("Doctor Anenome is the leader in bio-modification surgery.");
+        Jenni.Talk("Dr. Anenome is the leader in bio modification surgery.");
         break;        
       case 2:
         Jenni.Talk("To tell you the truth, I'm just trying to look busy.");
