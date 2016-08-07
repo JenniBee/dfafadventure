@@ -123,18 +123,17 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=TRUE
-
+    EDITOR_SELECTED=FALSE
     ENTITY {
       NAME="door"
       CAPTION="Door"
       ACTIVE=TRUE
-      X=0
-      Y=54
+      X=25
+      Y=150
       SCALABLE=TRUE
       INTERACTIVE=TRUE
       COLORABLE=TRUE
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
       SCRIPT="scenes\room\scr\door.script"
@@ -155,12 +154,12 @@ SCENE {
       NAME="window"
       CAPTION="Window"
       ACTIVE=TRUE
-      X=0
-      Y=54
+      X=298
+      Y=127
       SCALABLE=TRUE
       INTERACTIVE=TRUE
       COLORABLE=TRUE
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
       SCRIPT="scenes\room\scr\window.script"
@@ -173,7 +172,8 @@ SCENE {
         POINT {309,65}
         POINT {301,127}
         POINT {287,112}
-      }    
+      }
+
     }
 
     REGION {
@@ -189,7 +189,32 @@ SCENE {
       POINT {123,95}
       POINT {345,95}
       POINT {387,154}
-      POINT {72,156}
+      POINT {73,154}
+    }
+
+  }
+
+  LAYER {
+    NAME="foreground"
+    CAPTION=""
+    MAIN=FALSE
+    WIDTH=320
+    HEIGHT=170
+    ACTIVE=TRUE
+    EDITOR_SELECTED=TRUE
+    ENTITY {
+      NAME="foreground"
+      CAPTION=""
+      ACTIVE=TRUE
+      X=0
+      Y=127
+      SCALABLE=FALSE
+      INTERACTIVE=FALSE
+      COLORABLE=FALSE
+      EDITOR_SELECTED=TRUE
+      WALK_TO_X=0
+      WALK_TO_Y=0
+      SPRITE="scenes\room\foreground.bmp"
     }
 
   }

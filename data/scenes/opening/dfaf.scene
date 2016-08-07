@@ -3,10 +3,10 @@
 ; $EDITOR_PROJECT_ROOT_DIR$ ..\..\..\
 
 SCENE {
-  NAME="room"
+  NAME="opening"
   CAPTION=""
   SCRIPT="scripts\scene.script"
-  SCRIPT="scenes\ending\scr\ending_init.script"
+  SCRIPT="scenes\opening\scr\dfaf_init.script"
   
   ; ----- editor settings
   EDITOR_MARGIN_H=100
@@ -52,7 +52,7 @@ SCENE {
       EDITOR_SELECTED=TRUE
       WALK_TO_X=0
       WALK_TO_Y=0
-      SPRITE="scenes\ending\ending.bmp"
+      SPRITE="scenes\opening\dfaf.bmp"
     }
 
   }

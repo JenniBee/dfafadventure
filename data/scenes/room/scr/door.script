@@ -49,7 +49,6 @@ on "PickUp"
   
   Game.Interactive=false;
 
-  actor.TurnTo(DI_DOWN);
   actor.Talk("Sure, I'd pick that up.");
   actor.Talk("If only I had a chainsaw!");
 
@@ -67,7 +66,6 @@ on "Use"
 
   Game.Interactive=false;
 
-  actor.TurnTo(DI_DOWN);
   actor.Talk("Yep, just as I thought. Locked.");
   
   verb_cleanBar();
@@ -84,7 +82,6 @@ on "Sniff"
 
   Game.Interactive=false;
 
-  actor.TurnTo(DI_DOWN);
   actor.Talk("It smells like cedar.");
   
   verb_cleanBar();
@@ -103,7 +100,6 @@ on "book1"
 
   	Game.Interactive=false;
 
-  	actor.TurnTo(DI_DOWN);
   actor.Talk("I'm not giving anything to that door.");
 
   	verb_cleanBar();
@@ -116,7 +112,6 @@ on "book1"
 
   	Game.Interactive=false;
 
-  	actor.TurnTo(DI_DOWN);
   actor.Talk("It won't open, but throwing the letter at it won't help.");
 
   	verb_cleanBar();
