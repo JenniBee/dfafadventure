@@ -39,7 +39,7 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=FALSE
+    EDITOR_SELECTED=TRUE
     ENTITY {
       NAME="background"
       CAPTION=""
@@ -56,33 +56,33 @@ SCENE {
     }
 
     ENTITY {
-      NAME="fhqwhgads"
-      CAPTION="Fhqwhgads"
+      NAME="darthmarsden"
+      CAPTION="Darth Marsden"
       ACTIVE=TRUE
-      X=185
-      Y=60
+      X=205
+      Y=38
       SCALABLE=FALSE
       INTERACTIVE=FALSE
       COLORABLE=FALSE
-      EDITOR_SELECTED=FALSE
+      EDITOR_SELECTED=TRUE
       WALK_TO_X=0
       WALK_TO_Y=0
-      SPRITE="entities\fhqwhgads\sprites\00.bmp"
+      SPRITE="entities\darthmarsden\sprites\00.bmp"
     }
 
     ENTITY {
-      NAME="feddlefew"
-      CAPTION="Feddlefew"
+      NAME="rightsaidbrett"
+      CAPTION="Right Said Brett"
       ACTIVE=TRUE
-      X=125
-      Y=75
+      X=111
+      Y=62
       SCALABLE=FALSE
       INTERACTIVE=FALSE
       COLORABLE=FALSE
       EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
-      SPRITE="entities\feddlefew\sprites\00.bmp"
+      SPRITE="entities\rightsaidbrett\sprites\00.bmp"
     }
 
     ENTITY {
@@ -200,7 +200,7 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=TRUE
+    EDITOR_SELECTED=FALSE
     ENTITY {
       NAME="new entity"
       CAPTION=""
@@ -210,7 +210,7 @@ SCENE {
       SCALABLE=FALSE
       INTERACTIVE=FALSE
       COLORABLE=FALSE
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
       SPRITE="scenes\room2\foreground.bmp"
