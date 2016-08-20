@@ -12,8 +12,8 @@ INVENTORY_BOX
 
   WINDOW
   {
-    X = 200
-    Y = 196
+    X = 170
+    Y = 190
     WIDTH = 108
     HEIGHT = 36
     IMAGE = "interface\inventory.bmp"
@@ -21,8 +21,8 @@ INVENTORY_BOX
     BUTTON
     {
       NAME = "prev"
-      X = 0
-      Y = 2
+      X = 130
+      Y = 1
       WIDTH = 20
       HEIGHT = 20
 
@@ -36,7 +36,7 @@ INVENTORY_BOX
     BUTTON
     {
       NAME = "next"
-      X = 0
+      X = 130
       Y = 24
       WIDTH = 20
       HEIGHT = 20
