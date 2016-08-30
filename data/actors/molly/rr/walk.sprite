@@ -12,7 +12,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\00.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -20,7 +20,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\01.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -28,7 +28,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\02.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -36,7 +36,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\03.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -44,7 +44,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\04.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -52,7 +52,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\05.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -60,7 +60,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\06.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -68,7 +68,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\07.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -76,7 +76,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\08.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
   }
 
   FRAME {
@@ -84,7 +84,7 @@ SPRITE {
     MOVE {12, 0}
     KEYFRAME=FALSE
     IMAGE = "actors\molly\rr\walk\09.bmp"
-    HOTSPOT {60, 50}
+    HOTSPOT {19, 66}
     EDITOR_SELECTED=TRUE
   }
 

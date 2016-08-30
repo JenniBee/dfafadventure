@@ -20,11 +20,6 @@ ACTOR
       RIGHT      = "actors\molly\rr\walk.sprite"
       UP         = "actors\molly\uu\walk.sprite"
       DOWN       = "actors\molly\dd\walk.sprite"
-
-      UP_LEFT    = "actors\molly\ul\walk.sprite"
-      UP_RIGHT   = "actors\molly\ur\walk.sprite"
-      DOWN_LEFT  = "actors\molly\dl\walk.sprite"
-      DOWN_RIGHT = "actors\molly\dr\walk.sprite"
     }
   }
 
@@ -37,11 +32,6 @@ ACTOR
       RIGHT      = "actors\molly\rr\stand.sprite"
       UP         = "actors\molly\uu\stand.sprite"
       DOWN       = "actors\molly\dd\stand.sprite"
-
-      UP_LEFT    = "actors\molly\ul\stand.sprite"
-      UP_RIGHT   = "actors\molly\ur\stand.sprite"
-      DOWN_LEFT  = "actors\molly\dl\stand.sprite"
-      DOWN_RIGHT = "actors\molly\dr\stand.sprite"
     }
   }
 
@@ -54,11 +44,6 @@ ACTOR
       RIGHT      = "actors\molly\rr\turn.sprite"
       UP         = "actors\molly\uu\turn.sprite"
       DOWN       = "actors\molly\dd\turn.sprite"
-
-      UP_LEFT    = "actors\molly\ul\turn.sprite"
-      UP_RIGHT   = "actors\molly\ur\turn.sprite"
-      DOWN_LEFT  = "actors\molly\dl\turn.sprite"
-      DOWN_RIGHT = "actors\molly\dr\turn.sprite"
     }
   }
 
@@ -71,11 +56,6 @@ ACTOR
       RIGHT      = "actors\molly\rr\turn.sprite"
       UP         = "actors\molly\uu\turn.sprite"
       DOWN       = "actors\molly\dd\turn.sprite"
-
-      UP_LEFT    = "actors\molly\ul\turn.sprite"
-      UP_RIGHT   = "actors\molly\ur\turn.sprite"
-      DOWN_LEFT  = "actors\molly\dl\turn.sprite"
-      DOWN_RIGHT = "actors\molly\dr\turn.sprite"
     }
   }
 
@@ -88,11 +68,6 @@ ACTOR
       RIGHT      = "actors\molly\rr\talk.sprite"
       UP         = "actors\molly\uu\talk.sprite"
       DOWN       = "actors\molly\dd\talk.sprite"
-
-      UP_LEFT    = "actors\molly\ul\talk.sprite"
-      UP_RIGHT   = "actors\molly\ur\talk.sprite"
-      DOWN_LEFT  = "actors\molly\dl\talk.sprite"
-      DOWN_RIGHT = "actors\molly\dr\talk.sprite"
     }
   }
 }

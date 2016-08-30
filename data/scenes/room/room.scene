@@ -30,6 +30,21 @@ SCENE {
   EDITOR_SHOW_SCALE=TRUE
   
   ; ----- waypoints
+  WAYPOINTS {
+    NAME="new waypoints"
+    EDITOR_SELECTED=FALSE
+    EDITOR_SELECTED_POINT=-1
+    POINT {274,127}
+    POINT {278,141}
+    POINT {246,137}
+    POINT {191,137}
+    POINT {170,118}
+    POINT {137,119}
+    POINT {118,139}
+    POINT {71,139}
+    POINT {49,136}
+    POINT {140,138}
+  }
   
   ; ----- layers
   LAYER {
@@ -94,7 +109,7 @@ SCENE {
       WALK_TO_Y=0
       SCRIPT="entities\noname\noname.script"
       SPRITE="entities\noname\sprites\default.sprite"
-      FONT="fonts\outline_white.font"
+      FONT="fonts\outline_blue.font"
         TALK="entities\noname\sprites\talk.sprite"
     }
 
@@ -123,7 +138,7 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=FALSE
+    EDITOR_SELECTED=TRUE
     ENTITY {
       NAME="door"
       CAPTION="Door"
@@ -186,10 +201,42 @@ SCENE {
       ALPHA_COLOR { 255,255,255 }
       ALPHA = 255
       EDITOR_SELECTED=FALSE
-      POINT {123,95}
-      POINT {345,95}
-      POINT {387,154}
-      POINT {73,154}
+      POINT {58,107}
+      POINT {272,107}
+      POINT {304,166}
+      POINT {8,166}
+    }
+
+    REGION {
+      NAME="couchblocked"
+      CAPTION=""
+      BLOCKED=TRUE
+      DECORATION=FALSE
+      ACTIVE=TRUE
+      SCALE=0
+      ALPHA_COLOR { 255,255,255 }
+      ALPHA = 255
+      EDITOR_SELECTED=FALSE
+      POINT {172,101}
+      POINT {277,99}
+      POINT {263,129}
+      POINT {188,129}
+    }
+
+    REGION {
+      NAME="waterblocked"
+      CAPTION=""
+      BLOCKED=TRUE
+      DECORATION=FALSE
+      ACTIVE=TRUE
+      SCALE=0
+      ALPHA_COLOR { 255,255,255 }
+      ALPHA = 255
+      EDITOR_SELECTED=TRUE
+      POINT {68,104}
+      POINT {124,101}
+      POINT {125,131}
+      POINT {69,128}
     }
 
   }
@@ -201,7 +248,7 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=TRUE
+    EDITOR_SELECTED=FALSE
     ENTITY {
       NAME="foreground"
       CAPTION=""
@@ -211,7 +258,7 @@ SCENE {
       SCALABLE=FALSE
       INTERACTIVE=FALSE
       COLORABLE=FALSE
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
       SPRITE="scenes\room\foreground.bmp"

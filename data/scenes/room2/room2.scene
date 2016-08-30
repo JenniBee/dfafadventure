@@ -39,7 +39,7 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=TRUE
+    EDITOR_SELECTED=FALSE
     ENTITY {
       NAME="background"
       CAPTION=""
@@ -62,9 +62,9 @@ SCENE {
       X=205
       Y=38
       SCALABLE=FALSE
-      INTERACTIVE=FALSE
+      INTERACTIVE=TRUE
       COLORABLE=FALSE
-      EDITOR_SELECTED=TRUE
+      EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
       SPRITE="entities\darthmarsden\sprites\00.bmp"
@@ -77,7 +77,7 @@ SCENE {
       X=111
       Y=62
       SCALABLE=FALSE
-      INTERACTIVE=FALSE
+      INTERACTIVE=TRUE
       COLORABLE=FALSE
       EDITOR_SELECTED=FALSE
       WALK_TO_X=0
@@ -99,8 +99,8 @@ SCENE {
       WALK_TO_Y=0
       SCRIPT="entities\jenni\jenni.script"
       SPRITE="entities\jenni\sprites\default.sprite"
-      FONT="fonts\outline_white.font"
-        TALK="entities\jenni\sprites\talk.sprite"
+      FONT = "fonts\outline_red.font"
+      TALK="entities\jenni\sprites\talk.sprite"
     }
 
   }
@@ -122,9 +122,9 @@ SCENE {
     WIDTH=320
     HEIGHT=170
     ACTIVE=TRUE
-    EDITOR_SELECTED=FALSE
+    EDITOR_SELECTED=TRUE
     ENTITY {
-      NAME="door"
+      NAME="whitedoor"
       CAPTION="Door"
       ACTIVE=TRUE
       X=25
@@ -135,7 +135,7 @@ SCENE {
       EDITOR_SELECTED=FALSE
       WALK_TO_X=0
       WALK_TO_Y=0
-      SCRIPT="scenes\room\scr\door.script"
+      SCRIPT="scenes\room2\scr\whitedoor.script"
       REGION {
         NAME="door"
         CAPTION=""
@@ -150,7 +150,7 @@ SCENE {
     }
 
     ENTITY {
-      NAME="window"
+      NAME="door"
       CAPTION="Door"
       ACTIVE=TRUE
       X=294
@@ -158,10 +158,10 @@ SCENE {
       SCALABLE=TRUE
       INTERACTIVE=TRUE
       COLORABLE=TRUE
-      EDITOR_SELECTED=FALSE
+      EDITOR_SELECTED=TRUE
       WALK_TO_X=0
       WALK_TO_Y=0
-      SCRIPT="scenes\room\scr\window.script"
+      SCRIPT="scenes\room2\scr\door.script"
       REGION {
         NAME="window"
         CAPTION=""
@@ -185,10 +185,42 @@ SCENE {
       ALPHA_COLOR { 255,255,255 }
       ALPHA = 255
       EDITOR_SELECTED=FALSE
-      POINT {178,98}
-      POINT {345,95}
-      POINT {387,154}
-      POINT {165,155}
+      POINT {124,112}
+      POINT {263,109}
+      POINT {314,167}
+      POINT {101,170}
+    }
+
+    REGION {
+      NAME="blockbrett"
+      CAPTION=""
+      BLOCKED=FALSE
+      DECORATION=FALSE
+      ACTIVE=TRUE
+      SCALE=0
+      ALPHA_COLOR { 255,255,255 }
+      ALPHA = 255
+      EDITOR_SELECTED=FALSE
+      POINT {123,105}
+      POINT {145,104}
+      POINT {143,140}
+      POINT {117,142}
+    }
+
+    REGION {
+      NAME="blockchris"
+      CAPTION=""
+      BLOCKED=FALSE
+      DECORATION=FALSE
+      ACTIVE=TRUE
+      SCALE=0
+      ALPHA_COLOR { 255,255,255 }
+      ALPHA = 255
+      EDITOR_SELECTED=FALSE
+      POINT {206,100}
+      POINT {244,99}
+      POINT {244,120}
+      POINT {209,119}
     }
 
   }

@@ -93,7 +93,7 @@ on "Use"
 }
 
 ////////////////////////////////////////////////////////////////////////////////
-on "Sniff"
+on "Move"
 {
   verb_setBar(Command.Verb + " "+self.Caption);
 
@@ -101,7 +101,7 @@ on "Sniff"
 
   Game.Interactive=false;
 
-  actor.Talk("It smells like plastic.");
+  actor.Talk("It's too big to move.");
   
   verb_cleanBar();
 
@@ -168,7 +168,7 @@ on "MouseLeave"
 
 function GoToObject()
 {
-  actor.GoTo(80, 120);
-  actor.TurnTo(DI_UPLEFT);
+actor.GoTo(77, 137);
+actor.TurnTo(DI_RIGHT);
 }
 

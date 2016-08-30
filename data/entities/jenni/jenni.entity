@@ -14,5 +14,5 @@ ENTITY
   TALK="entities\jenni\sprites\talk.sprite"
 
   SCRIPT="entities\jenni\jenni.script"
-  FONT = "fonts\outline_white.font"
+  FONT = "fonts\outline_red.font"
 }

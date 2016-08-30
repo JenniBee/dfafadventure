@@ -15,6 +15,8 @@ Speaker = Scene.GetNode("speaker");
 NoName.SubtitlesPosX = 0; //position of subtitles for your entity
 NoName.SubtitlesPosY = -20;
 
+if(KnowNoName != true) self.Caption = "Edgar Allen Poe?";
+else if(KnowNoName == true) self.Caption = "NoName";
 
 ////////////////////////////////////////////////////////////////////////////////
 on "LookAt"
@@ -23,7 +25,8 @@ on "LookAt"
   GoToObject();
   Game.Interactive=false;
 
-  actor.Talk("Holy cow. Is that Edgar Allen Poe?");
+if(KnowNoName != true) actor.Talk("Holy cow. Is that Edgar Allen Poe?");
+else actor.Talk("It's he who goes by no name.");
 
   verb_cleanBar();
   Game.Interactive=true;
@@ -39,14 +42,15 @@ on "TalkTo"
   GoToObject();
 
   Game.Interactive = false;
-  
+  verb_cleanBar();
+
   verb_changeMode(1);
 
   var EndBranch = false;
 
   while(!EndBranch) // loop until the player ends this dialogue
   {  
-    Game.AddResponseOnce(0, "Are you Edgar Allen Poe?");
+    if(KnowNoName != true) Game.AddResponseOnce(0, "Are you Edgar Allen Poe?");
     Game.AddResponse(2, "How do I get out of here?");
     Game.AddResponse(3, "I'll leave you and your raven in peace.");
     
@@ -70,6 +74,8 @@ on "TalkTo"
         NoName.Talk("Because this is the 215th time someone asked me that question.");
         actor.Talk("I'll just stick with Noname.");
         Game.AddResponseOnce(1, "What is this place?");
+        KnowNoName = true;
+        self.Caption = "NoName";
         break;
       case 1:
         NoName.Talk("It's some kind of laboratory.");
@@ -144,6 +150,6 @@ on "MouseLeave"
 
 function GoToObject()
 {
-  actor.GoTo(59, 50);
-  actor.TurnTo(DI_UPRIGHT);
+actor.GoTo(189, 137);
+actor.TurnTo(DI_RIGHT);
 }

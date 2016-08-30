@@ -99,6 +99,6 @@ on "LeftClick"
 ////////////////////////////////////////////////////////////////////////////////
 function GoToObject()
 {
-  actor.GoTo(300, 120);
-  actor.TurnTo(DI_UPRIGHT);
+actor.GoTo(270, 139);
+actor.TurnTo(DI_RIGHT);
 }

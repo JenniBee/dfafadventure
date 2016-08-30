@@ -12,16 +12,15 @@ speaker.SubtitlesPosX = 0; //position of subtitles for your entity
 speaker.SubtitlesPosY = -20;
 
 ////////////////////////////////////////////////////////////////////////////////
-actor.SkipTo(188, 128);
+actor.SkipTo(148, 128);
 actor.Direction = DI_DOWNRIGHT;
 actor.SubtitlesPosX = 0; //position of subtitles for your actor
 actor.SubtitlesPosY = -20;
 
 verb_changeMode(0);
 
-// point the "camera" at the actor
-Scene.SkipTo(55,140);
-//Scene.SkipTo(actor);
+Game.PlayMusicChannel(1, "music\feelthegroove.wav", true);
+Game.MusicCrossfade(0, 1, 500);
 
 ////////////////////////////////////////////////////////////////////////////////
 // scene state

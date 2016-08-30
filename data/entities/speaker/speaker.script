@@ -84,5 +84,5 @@ on "MouseLeave"
 function GoToObject()
 {
   actor.GoTo(59, 50);
-  actor.TurnTo(DI_UPRIGHT);
+  actor.TurnTo(DI_RIGHT);
 }
